@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "RUN",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/isomorphic.js",
+      "program": "${workspaceFolder}/valid_parentheses.js",
       "console": "integratedTerminal"
     }
   ]
