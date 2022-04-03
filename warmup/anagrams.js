@@ -19,4 +19,4 @@ function groupAnagrams(strs) {
   return Array.from(anagram_map.values());
 }
 
-groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]);
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
