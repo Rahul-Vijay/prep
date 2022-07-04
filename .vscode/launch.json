@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "RUN",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/valid_parentheses.js",
+      "program": "${workspaceFolder}/binary_search/first_occurence.js",
       "console": "integratedTerminal"
     }
   ]
