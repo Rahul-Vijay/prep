@@ -25,6 +25,7 @@ var dfs = function (path, digits, res) {
 };
 
 var letterCombinations = function (digits) {
+  if (digits === "") return [];
   const res = [];
   dfs([], digits, res);
   return res;
