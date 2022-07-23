@@ -6,7 +6,7 @@ function bfs(root) {
     for (const neighbour of get_neighbours(node)) {
       if (visited.has(neighbour)) continue;
       q.push(neighbour);
-      visited.push(neighbour);
+      visited.add(neighbour);
     }
   }
 }
