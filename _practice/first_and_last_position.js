@@ -7,16 +7,25 @@
  */
 var searchRange = function (nums, target) {
   function binarySearch(rightBool) {
-    var toFindIndex = -1;
-    var left = 0;
-    var right = nums.length - 1;
+    // initialize as -1 to handle -
+    // no target found case
+    // empty array case
+    let toFindIndex = -1;
+    let left = 0;
+    let right = nums.length - 1;
     while (left <= right) {
-      var mid = Math.floor((left + right) / 2);
+      let mid = Math.floor((left + right) / 2);
       if (nums[mid] === target) {
         toFindIndex = mid;
+        // if rightBool is true,
+        // keep going left of mid
+        // to find leftmost
         if (rightBool) {
           left = mid + 1;
         } else {
+          // if rightBool is false,
+          // keep going right of mid
+          // to find rightmost
           right = mid - 1;
         }
       } else if (nums[mid] > target) {
@@ -27,9 +36,5 @@ var searchRange = function (nums, target) {
     }
     return toFindIndex;
   }
-
-  const res = [];
-  res.push(binarySearch(false));
-  res.push(binarySearch(true));
-  return res;
+  return [binarySearch(false), binarySearch(true)];
 };
