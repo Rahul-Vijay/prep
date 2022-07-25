@@ -6,7 +6,7 @@
  * @return {number[]}
  */
 var searchRange = function (nums, target) {
-  function binarySearch(rightBool) {
+  function bfs(rightBool) {
     // initialize as -1 to handle -
     // no target found case
     // empty array case
@@ -36,5 +36,5 @@ var searchRange = function (nums, target) {
     }
     return toFindIndex;
   }
-  return [binarySearch(false), binarySearch(true)];
+  return [bfs(false), bfs(true)];
 };
